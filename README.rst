@@ -16,7 +16,7 @@
 =============================================
 *version 0.7.9*
 
-`pyldpc <https://github.com/hichamjanati/pyldpc/>`
+origian source: `pyldpc <https://github.com/hichamjanati/pyldpc/>`_
 
 Description:
 ------------
