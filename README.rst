@@ -15,6 +15,7 @@
 **Simulation of LDPC Codes & Applications**
 =============================================
 *version 0.7.9*
+
 `pyldpc <https://github.com/hichamjanati/pyldpc/>`
 
 Description:
