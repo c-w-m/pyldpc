@@ -60,7 +60,7 @@ def decode_img(tG, H, codeword, snr, img_shape, maxiter=100):
     ----------
     tG: array (n, k) coding matrix G
     H: array (m, n) decoding matrix H
-    img_coded: array (n, n_blocks) image recieved in the codeword
+    img_coded: array (n, n_blocks) image received in the codeword
     snr: float. signal to noise ratio assumed of the channel.
     img_shape: tuple of int. Shape of the original binary image.
     maxiter: int. Max number of BP iterations to perform.
@@ -88,7 +88,7 @@ def decode_img(tG, H, codeword, snr, img_shape, maxiter=100):
 
     if not (tG[:k, :] == np.identity(k)).all():
         warnings.warn("""In LDPC applications, using systematic coding matrix
-                         G is highly recommanded to speed up decoding.""")
+                         G is highly recommended to speed up decoding.""")
         systematic = False
 
     codeword_solution = decode(H, codeword, snr, maxiter)

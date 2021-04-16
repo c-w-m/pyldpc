@@ -6,9 +6,11 @@ Coding - Decoding simulation of a random message
 This example shows a simulation of the transmission of a binary message
 through a gaussian white noise channel with an LDPC coding and decoding system.
 """
-
+from typing import Optional, Union    # , Tuple
 
 import numpy as np
+from numpy import ndarray
+
 from pyldpc import make_ldpc, decode, get_message, encode
 from matplotlib import pyplot as plt
 
@@ -32,7 +34,7 @@ print("Number of coded bits:", k)
 # The coding and decoding can be done in parallel by column stacking.
 
 errors = []
-snrs = np.linspace(-2, 10, 20)
+snrs: Union[ndarray, tuple[ndarray, Optional[float]]] = np.linspace(-2, 10, 20)
 v = np.arange(k) % 2  # fixed k bits message
 n_trials = 50  # number of transmissions with different noise
 V = np.tile(v, (n_trials, 1)).T  # stack v in columns

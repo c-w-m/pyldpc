@@ -1,6 +1,6 @@
 import numpy as np
 from pyldpc import make_ldpc, ldpc_images
-from pyldpc.utils_img import gray2bin, rgb2bin
+from pyldpc.utils_img import gray2bin     # , rgb2bin
 from matplotlib import pyplot as plt
 from PIL import Image
 
@@ -45,9 +45,9 @@ print("tree | Decoding time: ", t)
 error_decoded_tree = abs(tree - tree_decoded).mean()
 error_noisy_tree = abs(tree_noisy - tree).mean()
 
-plt.imshow(tree,'gray')
+plt.imshow(tree, 'gray')
 plt.show()
-plt.imshow(tree_noisy,'gray')
+plt.imshow(tree_noisy, 'gray')
 plt.show()
-plt.imshow(tree_decoded,'gray')
+plt.imshow(tree_decoded, 'gray')
 plt.show()

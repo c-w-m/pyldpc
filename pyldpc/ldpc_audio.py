@@ -77,7 +77,7 @@ def decode_audio(tG, H, codeword, snr, audio_shape, maxiter=1000):
 
     if not (tG[:k, :] == np.identity(k)).all():
         warnings.warn("""In LDPC applications, using systematic coding matrix
-                         G is highly recommanded to speed up decode.""")
+                         G is highly recommended to speed up decode.""")
         systematic = False
 
     codeword_solution = decode(H, codeword, snr, maxiter)

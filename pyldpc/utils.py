@@ -47,7 +47,7 @@ def gaussjordan(X, change=0):
     -------
     if `change` == 'True':
         A: array (m, n). row reduced form of X.
-        P: tranformations applied to the identity
+        P: transformations applied to the identity
     else:
         A: array (m, n). row reduced form of X.
 
